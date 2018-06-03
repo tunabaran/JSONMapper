@@ -1,5 +1,3 @@
-package com.tunabaranurut.microdb;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
