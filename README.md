@@ -6,7 +6,7 @@ JSONMapper is a library designed to simplify creating Java object from JSONs and
 
 You can access methods from Class reference.
 
-**You can get Java object from json with : 
+**You can get Java object from json with :** 
 
 ```
 
@@ -14,7 +14,7 @@ User user = JsonMapper.getObjectFromJson(json,User.class);
 
 ```
 
-**And you can get JSONObject form java object with :
+**And you can get JSONObject form java object with :**
 
 ```
 
