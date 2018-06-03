@@ -5,7 +5,24 @@ JSONMapper is a library designed to simplify creating Java object from JSONs and
 
 ## INSTALLATION
 
-Just copy JsonMapper.java to any package in your project.
+Add
+
+```
+
+compile group: 'org.json', name: 'json', version: '20180130'
+
+```
+**On never versions of gradle**
+
+```
+
+implementation group: 'org.json', name: 'json', version: '20180130'
+
+```
+**Some android packages already contains this package, you may not need to include this dependency**
+
+```
+Then copy JsonMapper.java to any package in your project.
 
 ## HOW TO USE
 
