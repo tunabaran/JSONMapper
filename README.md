@@ -1,5 +1,6 @@
 # JSONMapper
 Mapper class for JSON.
+
 JSONMapper is a library designed to simplify creating Java object from JSONs and creating JSON from java objects.
 
 # HOW TO USE
