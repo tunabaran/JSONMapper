@@ -3,7 +3,11 @@ Mapper class for JSON.
 
 JSONMapper is a library designed to simplify creating Java object from JSONs and creating JSON from java objects.
 
-# HOW TO USE
+## INSTALLATION
+
+Just copy JsonMapper.java to any package in your project.
+
+## HOW TO USE
 
 You can access methods from Class reference.
 
@@ -23,7 +27,7 @@ JSONObject jsonObject = JsonMapper.getJsonObject(user);
 
 ```
 
-# License
+## License
 
 Copyright (C) 2018
 
