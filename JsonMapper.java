@@ -1,7 +1,3 @@
-package com.tunabaranurut.microdb.util;
-
-import com.tunabaranurut.microdb.core.UnSupportedTypeException;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -127,4 +123,10 @@ public abstract class JsonMapper {
         }
     }
 
+    public static class UnSupportedTypeException extends Exception{
+        public UnSupportedTypeException(String type) {
+            super(type + " is not supported by JsonMapper.");
+        }
+    }
+    
 }
