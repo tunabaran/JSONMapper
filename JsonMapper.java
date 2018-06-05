@@ -1,3 +1,7 @@
+package com.tunabaranurut.microdb.util;
+
+import com.tunabaranurut.microdb.core.UnSupportedTypeException;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -18,7 +22,7 @@ public abstract class JsonMapper {
     private static String TAG = JsonMapper.class.getSimpleName();
 
     private static HashSet<String> primitives = new HashSet<>(Arrays.asList("int","Integer","String","boolean","Boolean","double","Double","long","Long","short","Short","float","Float"));
-    private static HashSet<String> unSupportedTypes = new HashSet<>(Arrays.asList("char","Character"));
+    private static HashSet<String> unSupportedTypes = new HashSet<>(Arrays.asList("HashSet","char","Character"));
 
     public static JSONObject getJsonObject(Object object) throws Exception{
 
@@ -109,16 +113,17 @@ public abstract class JsonMapper {
         return objectInstance;
     }
 
-    private static void controlUnSupportedTypes(String type) throws UnSupportedTypeException{
-        if(unSupportedTypes.contains(type)) {
-            throw new UnSupportedTypeException(type);
-        }
+    public static boolean isPrimitive(Class c){
+        return primitives.contains(c.getSimpleName());
     }
 
-    public static class UnSupportedTypeException extends Exception{
+    public static boolean isPrimitive(Object o){
+        return isPrimitive(o.getClass());
+    }
 
-        public UnSupportedTypeException(String type) {
-            super(type + " is not supported by DB.");
+    private static void controlUnSupportedTypes(String type) throws UnSupportedTypeException {
+        if(unSupportedTypes.contains(type)) {
+            throw new UnSupportedTypeException(type);
         }
     }
 
